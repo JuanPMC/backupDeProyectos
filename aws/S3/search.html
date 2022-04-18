@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+var username = "pepe";
+
+function aniadirFicheroALista(fichero){
+	let verVid = '<a href="/verVideo.html?video=' + fichero + '">[Ver]<a>'
+	document.getElementById("ficheros").innerHTML += "<li> "+ fichero + " " +  verVid +"</li>";
+}
+
+function getFicheros() {
+	document.getElementById("ficheros").innerHTML = ''
+
+	let serchItem = document.getElementById("searchItem").value;
+	var asd=$.get(
+ 			"http://54.166.39.218:30159/searchFiles.php?searchitem=" + serchItem,
+		    {},
+		    function(data) {
+
+		       var json=JSON.parse(data);
+                       json=JSON.parse(json);
+
+		       json.forEach(aniadirFicheroALista);
+		    }
+		)
+
+}
+
+</script>
+
+
+
+</head>
+<body>
+
+  <a href="search.html">search</a>/<a href="login.html">Login</a>/<a href="register.html">Register</a>
+
+<center>
+  <h1>BananaTube</h1>
+  <input id="searchItem" type="text" value="" />
+  <button onclick="getFicheros()" type="submit" value="Search" name="submit">Buscar</button>
+</center>
+
+<ul id="ficheros"></ul>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+function responder(respuesta){
+	console.log(respuesta)
+	if(respuesta=='"true"'){
+		window.location.assign('http://cubodeclase.s3.amazonaws.com/success.html');
+	}else{
+		alert("Usuario o contrasenia estan mal introducidas");
+	}
+}
+
+
+function login(){
+	$.get(("http://3.214.82.125:32637/login_gateway.php?user=" + document.getElementById("userParam").value + "&pass=" + document.getElementById("passParam").value), function(data, status){responder(data);});
+}
+
+
+</script>
+
+</head>
+<body>
+<center>
+<h1>Practiac3</h1>
+<h2>Login:</h2>
+  Usuario: <input type="text" id="userParam"><br>
+	Contrasenia: <input type="password" id="passParam">
+	<input type="submit" onclick="login()" value="Iniciar sesion" name="submit" >
+</center>
+
+</body>
+</html>

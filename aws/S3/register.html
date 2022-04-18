@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+function responder(respuesta){
+	console.log(respuesta)
+	if(respuesta=="\n\"true\""){
+		alert("Usuario regustrado correctamente");
+		window.location.assign('http://elbucketbananero.s3-website-us-east-1.amazonaws.com/login.html');
+	}else{
+		alert("El usuario ya existe");
+	}
+}
+
+
+function login(){
+	$.get(("http://54.166.39.218:30159/register_gateway.php?user=" + document.getElementById("userParam").value + "&pass=" + document.getElementById("passParam").value + "&frase=" + document.getElementById("fraseParam").value), function(data, status){responder(data);});
+}
+
+
+</script>
+
+
+
+</head>
+<body>
+  <a href="search.html">search</a>/<a href="login.html">Login</a>/<a href="register.html">Register</a>
+<center>
+  <h1>BananaTube</h1>
+  <h2>Registrar:</h2>
+  Email: <input type="text" id="emailParam"><br>
+	Usuario: <input type="text" id="userParam"><br>
+	Contrasenia: <input type="password" id="passParam"><br>
+	Repetir contrasenia: <input type="password" id="passParam2"><br>
+  Cual es el nombre de tu primer crush? <input type="text" id="fraseParam">
+	<input type="submit" onclick="login()" value="Iniciar sesion" name="submit" >
+</center>
+
+</body>
+</html>

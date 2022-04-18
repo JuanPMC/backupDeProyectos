@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+function putVideo(){
+	let videoLink = getUrlVars()["video"];
+	document.getElementById("fuente").src = videoLink;
+	document.getElementById("vid").load();
+}
+
+
+</script>
+
+
+
+</head>
+<body onload=putVideo()>
+
+ <video id="vid" width="320" height="240" controls>
+  <source id="fuente" src="movie.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
+
+</body>
+</html>
+
+

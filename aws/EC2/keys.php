@@ -1,0 +1,6 @@
+<?php
+$aws_access_key_id='ASIATAH4FVNLWP73ZOKQ';
+$aws_secret_access_key='8kmYA48oRGk9G36f8qsZUMQGljMhyi/4o6VogiYW';
+$aws_session_token='FwoGZXIvYXdzEPf//////////wEaDCKElwodhod7pfhO1yK9AfbAQrdlGAMj5Ca8pKLeB0LJq7iOomNjD4MBXbsxHuzP2kmuXQmjqA96qHXrUykrlELI/d6+LvEJh7rXdRtn1sKwEfrguO/z7eSQPHqq/fL/5b3v/f/kJwdxm8tHz1GzJuPmOEESYFKrdDDWCKe98ueiudyhSx81T2rycxh9OB2KIlofp+i1lVPqtDXCK8v2ehSn7NRbobvRDSmdG5n5a/a1UhvCNGGsl434v/0XyRK8H3DWZrHVfVPoI0GONSi/z62SBjItZ1CyZ36eUMxwm7lrOCrGuOpWvEeIoG2+vYxJ0Y4+ECZQyVnPgS19sMd9kyLo';
+?>
+

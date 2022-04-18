@@ -1,0 +1,3 @@
+/home/juan/Documents/practicas/4/distribuidos/Practica2/cliente/CMakeFiles/rebuild_cache.dir
+/home/juan/Documents/practicas/4/distribuidos/Practica2/cliente/CMakeFiles/fileManagerClient.dir
+/home/juan/Documents/practicas/4/distribuidos/Practica2/cliente/CMakeFiles/edit_cache.dir
